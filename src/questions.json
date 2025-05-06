@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1719,
+    "question": "What is the key difference between using the Context API and prop drilling?",
+    "description": "Understanding React's data passing patterns.",
+    "answers": {
+      "answer_a": "Prop drilling is always more performant",
+      "answer_b": "Context API avoids passing props through intermediate components",
+      "answer_c": "Context API only works with class components",
+      "answer_d": "There is no difference in functionality",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": "While prop drilling passes props through each level of the component tree explicitly, the Context API allows you to share values between components without explicitly passing props through every level, reducing code complexity and improving maintainability.",
+    "tip": null,
+    "tags": [
+      {
+        "name": "React"
+      }
+    ],
+    "category": "React",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 4237,
+    "question": "How do you handle browser back button navigation with modal states?",
+    "description": "Understanding modal state management. (Easy)",
+    "answers": {
+      "answer_a": "Ignore back button",
+      "answer_b": "Use shallow routing with modal state",
+      "answer_c": "Disable modals",
+      "answer_d": "Refresh page",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": "Using shallow routing with modal state allows proper handling of browser back button with modals while maintaining clean URLs and history states.",
+    "tip": null,
+    "tags": [
+      {
+        "name": "React"
+      }
+    ],
+    "category": "React",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 1717,
+    "question": "What happens when you return true from shouldComponentUpdate?",
+    "description": "Understanding React's rendering optimization.",
+    "answers": {
+      "answer_a": "The component skips rendering",
+      "answer_b": "The component proceeds with rendering",
+      "answer_c": "The component resets to initial state",
+      "answer_d": "The component unmounts",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": "When shouldComponentUpdate returns true, React proceeds with rendering the component. This method is a way to tell React whether the component needs to re-render, with true indicating that it should update.",
+    "tip": null,
+    "tags": [
+      {
+        "name": "React"
+      }
+    ],
+    "category": "React",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 1680,
+    "question": "What is the difference between controlled and uncontrolled components in React forms?",
+    "description": "Understanding form handling patterns in React.",
+    "answers": {
+      "answer_a": "Controlled components are always more performant",
+      "answer_b": "Controlled components manage form data with state, while uncontrolled components use DOM refs",
+      "answer_c": "Uncontrolled components are deprecated",
+      "answer_d": "There is no practical difference",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": "Controlled components maintain form data in React state, with values set through props and changes handled through callbacks. Uncontrolled components store form data in the DOM itself and use refs to access values. Each approach has its use cases, with controlled components offering more control and uncontrolled components being simpler for basic forms.",
+    "tip": null,
+    "tags": [
+      {
+        "name": "React"
+      }
+    ],
+    "category": "React",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 1659,
+    "question": "What is the key difference between Element and Component in React?",
+    "description": "Understanding fundamental React concepts and terminology.",
+    "answers": {
+      "answer_a": "Elements are faster than Components",
+      "answer_b": "Elements are plain objects describing what to render, while Components are functions or classes",
+      "answer_c": "Elements can only render HTML",
+      "answer_d": "Components can only be classes",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": "Elements are plain, immutable JavaScript objects that describe what you want to render (the virtual DOM representation). Components are functions or classes that accept props and return React elements. Elements are what components render.",
+    "tip": null,
+    "tags": [
+      {
+        "name": "React"
+      }
+    ],
+    "category": "React",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 1748,
+    "question": "What is the difference between props and state?",
+    "description": "Understanding fundamental React concepts.",
+    "answers": {
+      "answer_a": "Props and state are the same thing",
+      "answer_b": "Props are read-only and passed from parent, state is internal and mutable",
+      "answer_c": "State can't be changed",
+      "answer_d": "Props are only for class components",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": "Props are external, read-only values passed to a component from its parent, while state is internal, mutable data that the component manages itself. This fundamental distinction is crucial for understanding React's one-way data flow.",
+    "tip": null,
+    "tags": [
+      {
+        "name": "React"
+      }
+    ],
+    "category": "React",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 1647,
+    "question": "What is the difference between rendering lists using map() vs forEach() in React?",
+    "description": "Understanding array manipulation and rendering in React.",
+    "answers": {
+      "answer_a": "map() returns a new array while forEach() doesn't return anything",
+      "answer_b": "forEach() is faster than map() for rendering",
+      "answer_c": "map() can only be used with numbers",
+      "answer_d": "There is no difference",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": "map() is the correct choice for rendering lists in React because it returns a new array of elements that React can render. forEach() doesn't return anything, making it unsuitable for rendering lists. This is why you'll always see map() used for transforming data into React elements.",
+    "tip": null,
+    "tags": [
+      {
+        "name": "React"
+      }
+    ],
+    "category": "React",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 4147,
+    "question": "Your blog posts need unique social media previews. Where should you add Open Graph tags?",
+    "description": "Understanding social media optimization in Next.js.",
+    "answers": {
+      "answer_a": "In global CSS",
+      "answer_b": "In the Head component of each post",
+      "answer_c": "In public folder",
+      "answer_d": "In _app.js only",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": "Adding Open Graph tags in the Head component of each blog post page allows you to set unique social media previews for each post, improving sharing appearance.",
+    "tip": null,
+    "tags": [
+      {
+        "name": "React"
+      }
+    ],
+    "category": "React",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 1665,
+    "question": "What happens when you return 'null' from a React component's render method?",
+    "description": "Understanding React's rendering behavior.",
+    "answers": {
+      "answer_a": "It causes an error",
+      "answer_b": "The component renders an empty div",
+      "answer_c": "Nothing is rendered to the DOM",
+      "answer_d": "It renders undefined",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": "When a component returns null from its render method, React will render nothing to the DOM. This is a valid way to conditionally render nothing while keeping the component mounted and its state intact, unlike returning undefined which causes an error.",
+    "tip": null,
+    "tags": [
+      {
+        "name": "React"
+      }
+    ],
+    "category": "React",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 1739,
+    "question": "What is the difference between controlled and uncontrolled components in forms?",
+    "description": "Understanding form handling patterns in React.",
+    "answers": {
+      "answer_a": "Controlled components always perform better",
+      "answer_b": "Controlled components are managed by React state, uncontrolled components maintain their own internal state",
+      "answer_c": "Uncontrolled components are deprecated",
+      "answer_d": "There is no difference",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": "Controlled components have their values controlled by React state through props and onChange handlers, while uncontrolled components maintain their own internal state in the DOM and are accessed through refs when needed.",
+    "tip": null,
+    "tags": [
+      {
+        "name": "React"
+      }
+    ],
+    "category": "React",
+    "difficulty": "Easy"
+  }
+]

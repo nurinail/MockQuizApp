@@ -1,0 +1,32 @@
+@import "../../styles/variables.module";
+.modeComp{
+    width: 12.8rem;
+    height: 2.8rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_icon{
+        font-size: 24px;
+        display: inline-block;
+    }
+    &_btnWrapper{
+        width: 4rem;
+        height: 2.8rem;
+        background-color: var(--submit-color);
+        border-radius: 1rem;
+        position: relative;
+        &_item{
+            background-color: white;
+            position: absolute;
+            transition: all 0.7s;
+            top: 50%;
+            left: 20%;
+            transform: translate(-30%,-50%);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@import "./styles/_variables.module.scss";
+body{
+  font-family: "Rubik", sans-serif;
+}
+.app{
+  padding: 97px 140px;
+  background-color: var(--bg-color);
+  /* height: 100vh; */
+}
