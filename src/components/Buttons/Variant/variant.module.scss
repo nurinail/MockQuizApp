@@ -64,3 +64,21 @@
   background-color: #f6e7ff;
   color: var(--variant-hover-color);
 }
+.variantComp_true{
+    border: 2px solid #26d782;
+    .variantComp_wrapper{
+        .variantComp_wrapper_variant{
+            background-color: #26d782;
+            color: white;
+        }
+    }
+}
+.variantComp_false{
+    border: 2px solid #ee5454;
+    .variantComp_wrapper{
+        .variantComp_wrapper_variant{
+            background-color: #ee5454;
+            color: white;
+        }
+    }
+}

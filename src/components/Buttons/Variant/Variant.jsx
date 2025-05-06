@@ -23,11 +23,16 @@ const Variant = ({
     }
   };
 
-  const showCorrectIcon = isOnSubmit && correct && (isSelected || !isSelected);
+  const showCorrectIcon = isOnSubmit && correct;
   const showIncorrectIcon = isOnSubmit && isSelected && !correct;
 
+  const buttonClass = classNames(style.variantComp, {
+    [style.variantComp_true]: isOnSubmit && correct,
+    [style.variantComp_false]: isOnSubmit && isSelected && !correct,
+  });
+
   return (
-    <button onClick={handleClick} className={style.variantComp}>
+    <button onClick={handleClick} className={buttonClass}>
       <div className={style.variantComp_wrapper}>
         <span
           className={classNames(style.variantComp_wrapper_variant, {
@@ -44,6 +49,7 @@ const Variant = ({
       {showIncorrectIcon && (
         <IoIosCloseCircleOutline className={style.variantComp_iconClose} />
       )}
+
     </button>
   );
 };
