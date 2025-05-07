@@ -6,7 +6,8 @@ import { CiDark } from "react-icons/ci";
 const Mode = () => {
   
   return (
-    <div>
+    <div className={style.container}>
+      <div></div>
       <div className={style.modeComp}>
         <CiLight className={style.modeComp_icon} />
         <div className={style.modeComp_btnWrapper}>
