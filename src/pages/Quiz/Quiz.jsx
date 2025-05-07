@@ -4,9 +4,13 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import style from "./quiz.module.scss";
 
-const Quiz = ({currentQuizIndex,setCurrentQuizIndex,data,setCorrectAnswerCount}) => {
- 
-    const navigate = useNavigate();
+const Quiz = ({
+  currentQuizIndex,
+  setCurrentQuizIndex,
+  data,
+  setCorrectAnswerCount,
+}) => {
+  const navigate = useNavigate();
   const [selectedVariantIndex, setSelectedVariantIndex] = useState(null);
   const [isOnSubmit, setOnSubmit] = useState(false);
   const [isNextQuestion, setIsNextQuestion] = useState(false);
@@ -26,38 +30,34 @@ const Quiz = ({currentQuizIndex,setCurrentQuizIndex,data,setCorrectAnswerCount})
       };
     });
 
-    const handleSubmit = () => {
-        if (!isNextQuestion) {
-          if (selectedVariantIndex !== null) {
-            const selectedAnswer = combinedAnswers[selectedVariantIndex];
-            if (selectedAnswer.correct) {
-              setCorrectAnswerCount((prev) => prev + 1);
-            }
-      
-            setOnSubmit(true);
-            setIsNextQuestion(true);
-            setShowValidationError(false); 
-          } else {
-            setShowValidationError(true); 
-          }
-        } else {
-          const nextIndex = currentQuizIndex + 1;
-      
-          if (nextIndex >= data.length) {
-            // bütün suallar bitibsə result səhifəsinə get
-            navigate("/result");
-          } else {
-            setCurrentQuizIndex(nextIndex);
-            setSelectedVariantIndex(null);
-            setOnSubmit(false);
-            setIsNextQuestion(false);
-            setShowValidationError(false); 
-          }
+  const handleSubmit = () => {
+    if (!isNextQuestion) {
+      if (selectedVariantIndex !== null) {
+        const selectedAnswer = combinedAnswers[selectedVariantIndex];
+        if (selectedAnswer.correct) {
+          setCorrectAnswerCount((prev) => prev + 1);
         }
-      };
-      
-      
-      
+
+        setOnSubmit(true);
+        setIsNextQuestion(true);
+        setShowValidationError(false);
+      } else {
+        setShowValidationError(true);
+      }
+    } else {
+      const nextIndex = currentQuizIndex + 1;
+
+      if (nextIndex >= data.length) {
+        navigate("/result");
+      } else {
+        setCurrentQuizIndex(nextIndex);
+        setSelectedVariantIndex(null);
+        setOnSubmit(false);
+        setIsNextQuestion(false);
+        setShowValidationError(false);
+      }
+    }
+  };
 
   return (
     <div className={style.quizComp}>
@@ -99,11 +99,11 @@ const Quiz = ({currentQuizIndex,setCurrentQuizIndex,data,setCorrectAnswerCount})
           {isNextQuestion ? "Next Question" : "Submit Answer"}
         </button>
         {showValidationError && (
-  <div className={style.quizComp_validationError}>
-    <IoIosCloseCircleOutline />
-    <span>Please select an answer</span>
-  </div>
-)}
+          <div className={style.quizComp_variants_validationError}>
+            <IoIosCloseCircleOutline  className={style.quizComp_variants_validationError_icon}/>
+            <span className={style.quizComp_variants_validationError_text}>Please select an answer</span>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -5,20 +5,21 @@ import Home from "./pages/Home/Home";
 import Quiz from "./pages/Quiz/Quiz";
 import Result from "./pages/Result/Result";
 import dataApi from "./questions.json";
+import { htmlIcon } from "./assets/icons/Icon";
 import "./App.css";
 
 function App() {
   const [currentQuizIndex, setCurrentQuizIndex] = useState(0);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
-
+  const [selectedSubjectIcon, setSelectedSubjectIcon] = useState(null);
   const data = dataApi;
   const totalQuestion = data.length;
 
   return (
     <div className="app">
-      <Mode />
+      <Mode selectedSubjectIcon={selectedSubjectIcon}/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home setSelectedSubjectIcon={setSelectedSubjectIcon}/>} />
         <Route
           path="/quiz"
           element={
