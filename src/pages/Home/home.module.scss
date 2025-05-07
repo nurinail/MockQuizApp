@@ -1,7 +1,6 @@
 @import "../../styles/variables.module";
 .homeComp{
     width: 100%;
-    border: 1px solid red;
     display: grid;
     grid-template-columns: 1fr 1fr;
     &_intro{
