@@ -2,7 +2,7 @@
 
 .resultComp {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   width: 100%;
   &_text {
     display: flex;
@@ -23,7 +23,6 @@
   }
   &_info {
     width: 100%;
-    padding: 4.8rem;
     height: 40rem;
     display: flex;
     flex-direction: column;
@@ -31,6 +30,10 @@
     justify-content: flex-start;
     gap: 3.2rem;
     &_top {
+      padding: 4.8rem;
+      background-color: var(--bg-color-secondary);
+      box-shadow: 0px 16px 40px 0px #8fa0c124;
+      border-radius: 2.4rem;
       display: flex;
       width: 100%;
       flex-direction: column;
@@ -69,15 +72,30 @@
         font-size: 2.4rem;
       }
     }
-    &_againBtn{
+    &_againBtn {
+      width: 100%;
+      box-shadow: 0px 16px 40px 0px #8fa0c124;
+      background-color: var(--submit-color);
+      color: white;
+      padding: 3.2rem;
+      border-radius: 2.4rem;
+      font-size: 2.8rem;
+      font-weight: 500;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .resultComp {
+    grid-template-columns: 1fr;
+    &_text {
+      width: 100%;
+    }
+    &_info {
+      margin-top: 4rem;
+      width: 100%;
+      &_top {
         width: 100%;
-        box-shadow: 0px 16px 40px 0px #8FA0C124;
-        background-color: var(--submit-color);
-        color: white;
-        padding: 3.2rem;
-        border-radius: 2.4rem;
-        font-size: 2.8rem;
-        font-weight: 500;
+      }
     }
   }
 }

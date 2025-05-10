@@ -14,9 +14,8 @@ const Home = ({ setSelectedSubjectIcon }) => {
     <div className={style.homeComp}>
       <div className={style.homeComp_intro}>
         <span className={style.homeComp_intro_welcome}>Welcome to the</span>
-        <span className={style.homeComp_intro_name}>Frontend Quiz</span>
-        <p className={style.homeComp_intro_started}>
-          Pick a subject to get started.
+        <span className={style.homeComp_intro_name}>Frontend Quiz!</span>
+        <p className={style.homeComp_intro_started}>Pick a subject to get started.
         </p>
       </div>
       <div className={style.homeComp_subjects}>

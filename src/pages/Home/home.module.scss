@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     &_intro{
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -23,7 +24,7 @@
             margin-top: 4.8rem;
             color: var(--text-color-secondary);
             font-style: italic;
-            line-height: 1.5;
+            line-height: 1;
             font-weight: 400;
             font-size: 2rem;
         }
@@ -37,6 +38,21 @@
         gap: 2.4rem;
         &_link{
             width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .homeComp{
+        grid-template-columns: 1fr;
+        &_intro{
+            
+            &_started{
+                margin-top: 3.2rem;
+            }
+        }
+        &_subjects{
+            margin-top: 6.4rem;
         }
     }
 }

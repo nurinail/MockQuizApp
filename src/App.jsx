@@ -5,7 +5,6 @@ import Home from "./pages/Home/Home";
 import Quiz from "./pages/Quiz/Quiz";
 import Result from "./pages/Result/Result";
 import dataApi from "./questions.json";
-import { htmlIcon } from "./assets/icons/Icon";
 import "./App.css";
 
 function App() {

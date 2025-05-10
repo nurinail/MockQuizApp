@@ -17,3 +17,8 @@ button {
 a {
   text-decoration: none;
 }
+@media screen and (max-width:768px){
+  html{
+    font-size: 32.25%;
+}
+}

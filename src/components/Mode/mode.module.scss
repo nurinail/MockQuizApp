@@ -4,6 +4,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-bottom: 8.5rem;
   .wrapper {
     display: flex;
     align-items: flex-start;
@@ -28,7 +29,6 @@
   .modeComp {
     height: 2.8rem;
     gap: 1rem;
-    margin-bottom: 8.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,3 +66,29 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .container{
+  
+    .modeComp {
+      height: 3.73rem;
+      gap: 1.3rem;
+      &_icon {
+        font-size: 3.7rem;
+      }
+      &_btnWrapper {
+        width: 5.3rem;
+        height: 3.2rem;
+        border-radius: 1.3rem;
+        .modeComp_btnWrapper_item {
+          width: 2.26rem;
+          height: 2.26rem;
+        }
+        .modeComp_btnWrapper_itemActive {
+          width: 2.26rem;
+          height: 2.26rem;
+        }
+      }
+    }
+  }
+}
+

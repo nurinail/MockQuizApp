@@ -1,79 +1,91 @@
 @import "../../styles/variables.module";
-.quizComp{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.quizComp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    width: 100%;
-    &_text{
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 2.7rem;
-        &_count{
-            color: var(--text-color-secondary);
-            font-size: 2rem;
-            font-weight: 400;
-            font-style: italic;
-        }
-        &_question{
-            font-size: 3.2rem;
-            color: var(--text-color-primary);
-            font-weight: 500;
-            line-height: 1.2;
-        }
-        &_progress {
-            margin-top: 16.4rem;
-            width: 100%;
-            background-color: var(--bg-color-secondary);
-            padding: .4rem;
-            border-radius: 80rem;
-          
-            &_part {
-              background-color: var(--variant-hover-color);
-              height: .8rem;
-              border-radius: 10rem;
-            }
-          }
+  width: 100%;
+  &_text {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.7rem;
+    &_count {
+      color: var(--text-color-secondary);
+      font-size: 2rem;
+      font-weight: 400;
+      font-style: italic;
     }
-    &_variants{
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap:2.4rem;
-        flex-direction: column;
-        &_submitBtn{
-            background-color: var(--submit-color);
-            color: white;
-            width: 100%;
-            height: 9.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 2.4rem;
-            font-size: 2.8rem;
-            font-weight: 500;
-            line-height: 1;
-        }
-        &_validationError{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            gap: 1.3rem;
-            &_icon{
-                color: #EE5454;
-                font-size: 3rem;
-
-            }
-            &_text{
-                color: red;
-                font-size: 2.4rem;
-                font-weight: 200;
-                line-height: 1.5;
-            }
-        }
+    &_question {
+      font-size: 3.2rem;
+      color: var(--text-color-primary);
+      font-weight: 500;
+      line-height: 1.2;
     }
+    &_progress {
+      margin-top: 16.4rem;
+      width: 100%;
+      background-color: var(--bg-color-secondary);
+      padding: 0.4rem;
+      border-radius: 80rem;
 
+      &_part {
+        background-color: var(--variant-hover-color);
+        height: 0.8rem;
+        border-radius: 10rem;
+      }
+    }
+  }
+  &_variants {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.4rem;
+    flex-direction: column;
+    &_submitBtn {
+      background-color: var(--submit-color);
+      color: white;
+      width: 100%;
+      padding-block: 3.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2.4rem;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+    &_validationError {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 1.3rem;
+      &_icon {
+        color: #ee5454;
+        font-size: 3rem;
+      }
+      &_text {
+        color: red;
+        font-size: 2.4rem;
+        font-weight: 200;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .quizComp {
+    grid-template-columns: 1fr;
+    &_text {
+      width: 100%;
+      gap: 4rem;
+      &_progress {
+        margin-top: 0;
+      }
+    }
+    &_variants {
+      margin-top: 6.4rem;
+    }
+  }
 }
