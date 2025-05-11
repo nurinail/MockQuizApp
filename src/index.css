@@ -3,12 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 body {
   font-family: "Rubik", sans-serif;
-   background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 button {
   border: none;
@@ -18,8 +18,8 @@ button {
 a {
   text-decoration: none;
 }
-@media screen and (max-width:768px){
-  html{
+@media screen and (max-width: 768px) {
+  html {
     font-size: 32.25%;
-}
+  }
 }

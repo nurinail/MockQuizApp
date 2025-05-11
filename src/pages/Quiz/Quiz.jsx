@@ -91,7 +91,6 @@ const Quiz = ({
             isOnSubmit={isOnSubmit}
           />
         ))}
-
         <button
           className={style.quizComp_variants_submitBtn}
           onClick={handleSubmit}

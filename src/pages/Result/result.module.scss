@@ -1,86 +1,62 @@
 @import "./../../styles/variables.module";
+@import "./../../styles/mixin.module";
 
 .resultComp {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  @include d-grid(1.4fr 1fr, _);
   width: 100%;
   &_text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    @include d-flex(flex-start, flex-start, column, 0);
     &_complete {
-      color: var(--text-color-primary);
-      font-size: 6.4rem;
-      font-weight: 300;
+      @include font-style(var(--text-color-primary), 6.4rem, 300);
     }
     &_score {
-      color: var(--text-color-primary);
-      font-size: 6.4rem;
-      font-weight: 900;
+      @include font-style(var(--text-color-primary), 6.4rem, 900);
       line-height: 1;
     }
   }
   &_info {
+    @include d-flex(center, flex-start, column, 3.2rem);
     width: 100%;
     height: 40rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 3.2rem;
     &_top {
-      padding: 4.8rem;
-      background-color: var(--bg-color-secondary);
-      box-shadow: 0px 16px 40px 0px #8fa0c124;
-      border-radius: 2.4rem;
-      display: flex;
+      @include d-flex(center, flex-start, column, _);
       width: 100%;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+      background-color: var(--bg-color-secondary);
+      padding: 4.8rem;
+      border-radius: 2.4rem;
+      box-shadow: 0px 16px 40px 0px #8fa0c124;
       &_subject {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2.4rem;
+        @include d-flex(center, center, row, 2.4rem);
         &_icon {
           width: 5.6rem;
           height: 5.6rem;
           object-fit: cover;
         }
         &_name {
-          font-size: 2.8rem;
-          font-weight: 500;
-          color: var(--text-color-primary);
+          @include font-style(var(--text-color-primary), 2.8rem, 500);
         }
       }
       &_scoreCount {
+        @include font-style(var(--text-color-primary), 14rem, 500);
         width: 100%;
-        margin-top: 4rem;
         text-align: center;
-        font-size: 14rem;
-        font-weight: 500;
+        margin-top: 4rem;
         line-height: 1;
-        color: var(--text-color-primary);
       }
       &_totalyCount {
+        @include font-style(var(--text-color-secondary),2.4rem,400);
         width: 100%;
         text-align: center;
-        color: var(--text-color-secondary);
         line-height: 1.5;
-        font-size: 2.4rem;
       }
     }
     &_againBtn {
+      @include font-style(white,2.8rem,500);
       width: 100%;
       box-shadow: 0px 16px 40px 0px #8fa0c124;
       background-color: var(--submit-color);
-      color: white;
       padding: 3.2rem;
       border-radius: 2.4rem;
-      font-size: 2.8rem;
-      font-weight: 500;
     }
   }
 }

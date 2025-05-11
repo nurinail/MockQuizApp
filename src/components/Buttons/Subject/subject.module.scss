@@ -1,10 +1,8 @@
 @import "../../../styles/variables.module";
+@import "../../../styles/mixin.module";
 .subjectComp{
+    @include d-flex(center,flex-start,row,3.2rem);
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 3.2rem;
     padding: 2rem;
     background-color: var(--bg-color-secondary);
     box-shadow: 0px 16px 40px 0px #8FA0C124;
@@ -16,7 +14,6 @@
         object-fit: cover;
     }
     &_text{
-        font-size: 2.8rem;
-        color: var(--text-color-primary);
+        @include font-style(var(--text-color-primary),2.8rem,500);
     }
 }

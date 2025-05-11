@@ -1,58 +1,43 @@
 @import "../../styles/variables.module";
-.homeComp{
+@import "../../styles/mixin.module";
+.homeComp {
+  @include d-grid(1fr 1fr, _);
+  width: 100%;
+  &_intro {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    &_intro{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        &_welcome{
-            color: var(--text-color-primary);
-            font-size: 6.4rem;
-            font-weight: 300;
-        }
-        &_name{
-            color: var(--text-color-primary);
-            font-size: 6.4rem;
-            font-weight: 900;
-            line-height: .7;
-        }
-        &_started{
-            margin-top: 4.8rem;
-            color: var(--text-color-secondary);
-            font-style: italic;
-            line-height: 1;
-            font-weight: 400;
-            font-size: 2rem;
-        }
+    @include d-flex(flex-start, flex-start, column, 0);
+    &_welcome {
+      @include font-style(var(--text-color-primary), 6.4rem, 300);
     }
-    &_subjects{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 2.4rem;
-        &_link{
-            width: 100%;
-        }
+    &_name {
+      @include font-style(var(--text-color-primary), 6.4rem, 900);
+      line-height: 0.7;
     }
+    &_started {
+      @include font-style(var(--text-color-secondary), 2rem, 400);
+      margin-top: 4.8rem;
+      font-style: italic;
+    }
+  }
+  &_subjects {
+    @include d-flex(flex-start, flex-start, column, 2.4rem);
+    width: 100%;
+    &_link {
+      width: 100%;
+    }
+  }
 }
 
-@media screen and (max-width:768px){
-    .homeComp{
-        grid-template-columns: 1fr;
-        &_intro{
-            
-            &_started{
-                margin-top: 3.2rem;
-            }
-        }
-        &_subjects{
-            margin-top: 6.4rem;
-        }
+@media screen and (max-width: 768px) {
+  .homeComp {
+    grid-template-columns: 1fr;
+    &_intro {
+      &_started {
+        margin-top: 3.2rem;
+      }
     }
+    &_subjects {
+      margin-top: 6.4rem;
+    }
+  }
 }
